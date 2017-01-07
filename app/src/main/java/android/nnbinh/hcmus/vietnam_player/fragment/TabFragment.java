@@ -1,6 +1,5 @@
 package android.nnbinh.hcmus.vietnam_player.fragment;
 
-import android.app.Fragment;
 import android.nnbinh.hcmus.vietnam_player.R;
 import android.nnbinh.hcmus.vietnam_player.adapter.MyAdapter;
 import android.nnbinh.hcmus.vietnam_player.model.MediaModel;
@@ -10,7 +9,6 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -18,7 +16,7 @@ import java.util.ArrayList;
  * Created by nguyenngocbinh on 1/5/17.
  */
 
-public class FirstFragment extends BaseFragment {
+public class TabFragment extends BaseFragment {
     private String mPageTitle;
     private int mPageIndex;
     private final static String PAGE_INDEX = "PAGE_INDEX";
@@ -26,8 +24,8 @@ public class FirstFragment extends BaseFragment {
     private RecyclerView mRecyclerView;
     private MyAdapter mRecycleAdapter;
 
-    public static FirstFragment newInstance(int index, String title){
-        FirstFragment fragmentFirst = new FirstFragment();
+    public static TabFragment newInstance(int index, String title){
+        TabFragment fragmentFirst = new TabFragment();
         Bundle args = new Bundle();
         args.putInt(PAGE_INDEX, index);
         args.putString(PAGE_TITLE, title);
@@ -46,7 +44,7 @@ public class FirstFragment extends BaseFragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_first, container, false);
+        View view = inflater.inflate(R.layout.fragment_tab, container, false);
         setupRecycleView(view);
         return view;
     }
@@ -55,7 +53,6 @@ public class FirstFragment extends BaseFragment {
 
     private void setupRecycleView(View view) {
         mRecyclerView = (RecyclerView) view.findViewById(R.id.recycle_view);
-
         // use this setting to improve performance if you know that changes
         // in content do not change the layout size of the RecyclerView
         mRecyclerView.setHasFixedSize(true);

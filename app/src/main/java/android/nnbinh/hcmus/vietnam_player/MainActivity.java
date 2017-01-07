@@ -1,14 +1,18 @@
 package android.nnbinh.hcmus.vietnam_player;
 
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.Color;
 import android.nnbinh.hcmus.vietnam_player.Custom.CustomTab;
 import android.nnbinh.hcmus.vietnam_player.Custom.CustomTabLayout;
+import android.nnbinh.hcmus.vietnam_player.activity.BaseActivity;
 import android.nnbinh.hcmus.vietnam_player.activity.EqualizerActivity;
 import android.nnbinh.hcmus.vietnam_player.activity.ThemeActivity;
 import android.nnbinh.hcmus.vietnam_player.adapter.MyAdapter;
 import android.nnbinh.hcmus.vietnam_player.adapter.MyPagerAdapter;
+import android.nnbinh.hcmus.vietnam_player.fragment.EqualizerFragment;
 import android.nnbinh.hcmus.vietnam_player.fragment.MainFragment;
+import android.nnbinh.hcmus.vietnam_player.fragment.ThemeFragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -29,7 +33,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity
+public class MainActivity extends BaseActivity
         implements NavigationView.OnNavigationItemSelectedListener {
     public Toolbar getToolbar() {
         return toolbar;
@@ -106,12 +110,10 @@ public class MainActivity extends AppCompatActivity
 
 
         if (id == R.id.menu_item_equalizer) {
-            // Handle the camera action
-            intent = new Intent(MainActivity.this, EqualizerActivity.class);
-            startActivity(intent);
+            goToFragment(new EqualizerFragment());
         } else if (id == R.id.menu_item_ui) {
-            intent = new Intent(MainActivity.this, ThemeActivity.class);
-            startActivity(intent);
+//            goToActivity(ThemeActivity.class);
+            goToFragment(new ThemeFragment());
         } else if (id == R.id.menu_item_cloud) {
 
         } else if (id == R.id.nav_manage) {
@@ -125,12 +127,6 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    private void goToFragment(Fragment fragment){
-        getSupportFragmentManager().beginTransaction()
-            .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
-            .replace(R.id.content_main,fragment)
-            .addToBackStack(null).commit();
-    }
     /**
      * to close left menu
      * */
@@ -138,6 +134,4 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
-
-
 }

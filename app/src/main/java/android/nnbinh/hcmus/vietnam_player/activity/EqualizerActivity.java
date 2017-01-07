@@ -30,26 +30,14 @@ import android.widget.Toast;
  * Created by nguyenngocbinh on 1/7/17.
  */
 
-public class EqualizerActivity extends BaseFragment implements AdapterView.OnItemSelectedListener{
+public class EqualizerActivity extends BaseActivity implements AdapterView.OnItemSelectedListener{
     Spinner spinEqualizers;
-
-    @Nullable
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // noi thiet lap layout
-        View view = inflater.inflate(R.layout.activity_equalizer, container, false);
-        return view;
-    }
-
-    @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-        super.onViewCreated(view, savedInstanceState);
-        // khi layout da dx khoi tao, no se vao vay => day la noi minh hay goi ham findById
-
-//      phần này dùng để set các tùy chình cho toolbar của màn hình
-        //mình có thể theem các nút back, done hay là search
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_equalizer);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
 
 //        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
 //        fab.setOnClickListener(new View.OnClickListener() {
@@ -60,9 +48,9 @@ public class EqualizerActivity extends BaseFragment implements AdapterView.OnIte
 //            }
 //        });
 
-        spinEqualizers = (Spinner) view.findViewById(R.id.spinnerDefaultEqualizer);
+        spinEqualizers = (Spinner) findViewById(R.id.spinnerDefaultEqualizer);
         //Create an arrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
                 R.array.equalizers_default, android.R.layout.simple_spinner_dropdown_item);
 
         //specity the layout to use whent the list of choices appears
@@ -74,12 +62,6 @@ public class EqualizerActivity extends BaseFragment implements AdapterView.OnIte
     }
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
-    @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
     }
@@ -87,43 +69,5 @@ public class EqualizerActivity extends BaseFragment implements AdapterView.OnIte
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
-    }
-
-    @Override
-    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
-        super.onCreateOptionsMenu(menu, inflater);
-        inflater.inflate(R.menu.menu_drive, menu);
-
-    }
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.menu_drive, menu);
-//        return super.onCreateOptionsMenu(menu);
-//    }
-
-
-    //trở về màn hình chơi nhạc bình thường trước đó
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-//        Intent mhNomal = new Intent(EqualizerActivity.this, PlayerMediaFragment.class);
-//        startActivity(mhNomal);
-//        Toast.makeText(this, "Trở về giao diện Nomal", Toast.LENGTH_SHORT).show();
-
-
-
-//=============phần này dùng để gọi cái fragment chơi nhạc.==========================================================
-//        Fragment fragment = new PlayerMediaFragment();
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        android.support.v4.app.FragmentTransaction transaction = fragmentManager.beginTransaction();
-//        transaction.replace(R.id.fragment_equalizer_frame, fragment);
-//        transaction.addToBackStack(null);
-//        transaction.commit();
-
-
-
-
-        return true;
     }
 }

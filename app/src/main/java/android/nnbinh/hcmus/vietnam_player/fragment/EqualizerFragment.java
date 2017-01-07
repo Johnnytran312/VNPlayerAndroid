@@ -25,30 +25,14 @@ public class EqualizerFragment extends BaseFragment implements AdapterView.OnIte
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        // noi thiet lap layout
-        View view = inflater.inflate(R.layout.activity_equalizer, container, false);
+        View view = inflater.inflate(R.layout.fragment_equalizer, container, false);
+        setHasOptionsMenu(true);
         return view;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        // khi layout da dx khoi tao, no se vao vay => day la noi minh hay goi ham findById
-
-//      phần này dùng để set các tùy chình cho toolbar của màn hình
-        //mình có thể theem các nút back, done hay là search
-        Toolbar toolbar = (Toolbar) view.findViewById(R.id.toolbar);
-        ((AppCompatActivity) getActivity()).setSupportActionBar(toolbar);
-
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
-
         spinEqualizers = (Spinner) view.findViewById(R.id.spinnerDefaultEqualizer);
         //Create an arrayAdapter using the string array and a default spinner layout
         ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(getActivity(),
@@ -65,7 +49,7 @@ public class EqualizerFragment extends BaseFragment implements AdapterView.OnIte
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        setTitle(getString(R.string.menu_item_equalizer));
     }
 
     @Override
@@ -85,34 +69,8 @@ public class EqualizerFragment extends BaseFragment implements AdapterView.OnIte
 
     }
 
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.menu_drive, menu);
-//        return super.onCreateOptionsMenu(menu);
-//    }
-
-
-    //trở về màn hình chơi nhạc bình thường trước đó
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-//        Intent mhNomal = new Intent(EqualizerActivity.this, PlayerMediaFragment.class);
-//        startActivity(mhNomal);
-//        Toast.makeText(this, "Trở về giao diện Nomal", Toast.LENGTH_SHORT).show();
-
-
-
-//=============phần này dùng để gọi cái fragment chơi nhạc.==========================================================
-//        Fragment fragment = new PlayerMediaFragment();
-//        FragmentManager fragmentManager = getSupportFragmentManager();
-//        android.support.v4.app.FragmentTransaction transaction = fragmentManager.beginTransaction();
-//        transaction.replace(R.id.fragment_equalizer_frame, fragment);
-//        transaction.addToBackStack(null);
-//        transaction.commit();
-
-
-
-
         return true;
     }
 }

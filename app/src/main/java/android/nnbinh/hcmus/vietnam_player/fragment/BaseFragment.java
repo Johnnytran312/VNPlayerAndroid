@@ -2,18 +2,34 @@ package android.nnbinh.hcmus.vietnam_player.fragment;
 
 
 import android.content.Intent;
-import android.nnbinh.hcmus.vietnam_player.MainActivity;
 import android.nnbinh.hcmus.vietnam_player.R;
-import android.nnbinh.hcmus.vietnam_player.activity.EqualizerActivity;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
+import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
+import android.view.ViewGroup;
 
 /**
  * Created by nguyenngocbinh on 1/5/17.
  */
 
 public class BaseFragment extends Fragment implements View.OnClickListener{
+    private int mResLayoutId;
+
+    public void setLayout(int resLayoutId) {
+        mResLayoutId = resLayoutId;
+    }
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(mResLayoutId, container, false);
+        return view;
+    }
+
     public void goToFragment(Fragment fragment){
         getActivity().getSupportFragmentManager().beginTransaction()
                 .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
@@ -28,6 +44,12 @@ public class BaseFragment extends Fragment implements View.OnClickListener{
     public void goToActivity(Class activityClass) {
         Intent intent = new Intent(getActivity(), activityClass);
         startActivity(intent);
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        super.onCreateOptionsMenu(menu, inflater);
+        menu.clear();
     }
 
     @Override
