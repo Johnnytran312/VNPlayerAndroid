@@ -12,6 +12,7 @@ import android.nnbinh.hcmus.vietnam_player.fragment.MainFragment;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -122,6 +123,13 @@ public class MainActivity extends AppCompatActivity
         }
 
         return true;
+    }
+
+    private void goToFragment(Fragment fragment){
+        getSupportFragmentManager().beginTransaction()
+            .setCustomAnimations(android.R.anim.slide_in_left, android.R.anim.slide_out_right)
+            .replace(R.id.content_main,fragment)
+            .addToBackStack(null).commit();
     }
     /**
      * to close left menu
