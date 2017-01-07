@@ -1,5 +1,7 @@
 package android.nnbinh.hcmus.vietnam_player.activity;
 
+import android.content.Intent;
+import android.nnbinh.hcmus.vietnam_player.MainActivity;
 import android.nnbinh.hcmus.vietnam_player.R;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -70,6 +72,8 @@ public class DriveActivity extends AppCompatActivity implements View.OnClickList
     // when selectd item in menu
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        Intent mhNomal = new Intent(DriveActivity.this, MainActivity.class);
+        startActivity(mhNomal);
         Toast.makeText(this, "Trở về giao diện Nomal", Toast.LENGTH_SHORT).show();
         return true;
     }

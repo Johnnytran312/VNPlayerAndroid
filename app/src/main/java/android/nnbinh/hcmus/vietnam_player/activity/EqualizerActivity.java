@@ -1,13 +1,20 @@
 package android.nnbinh.hcmus.vietnam_player.activity;
 
+import android.content.Intent;
+import android.nnbinh.hcmus.vietnam_player.MainActivity;
 import android.nnbinh.hcmus.vietnam_player.R;
+import android.nnbinh.hcmus.vietnam_player.fragment.PlayerMediaFragment;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 /**
  * Created by nguyenngocbinh on 1/7/17.
@@ -52,5 +59,22 @@ public class EqualizerActivity extends AppCompatActivity implements AdapterView.
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_drive, menu);
+        return super.onCreateOptionsMenu(menu);
+    }
+
+
+    //trở về màn hình chơi nhạc bình thường trước đó
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+//        Intent mhNomal = new Intent(EqualizerActivity.this, PlayerMediaFragment.class);
+//        startActivity(mhNomal);
+//        Toast.makeText(this, "Trở về giao diện Nomal", Toast.LENGTH_SHORT).show();
+        return true;
     }
 }
