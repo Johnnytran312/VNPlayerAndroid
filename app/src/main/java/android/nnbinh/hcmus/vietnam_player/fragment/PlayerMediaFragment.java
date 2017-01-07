@@ -1,6 +1,7 @@
 package android.nnbinh.hcmus.vietnam_player.fragment;
 
 import android.nnbinh.hcmus.vietnam_player.R;
+import android.nnbinh.hcmus.vietnam_player.activity.EqualizerActivity;
 import android.nnbinh.hcmus.vietnam_player.model.MediaModel;
 import android.os.Bundle;
 import android.os.Handler;
@@ -26,7 +27,7 @@ public class PlayerMediaFragment extends BaseFragment {
     private ImageView mImageDisk;
     private ImageView mBtnPause;
     private ImageView mBtnPlay;
-
+    private ImageView mBtnEqualizer;
     private ProgressBar mProgressBar;
     private Runnable mUpdateProgressBar;
     private Handler handler = new Handler();
@@ -57,7 +58,30 @@ public class PlayerMediaFragment extends BaseFragment {
         mProgressBar = (ProgressBar) view.findViewById(R.id.progressBar);
         mBtnPause = (ImageView) view.findViewById(R.id.iv_action_pause);
         mBtnPlay = (ImageView) view.findViewById(R.id.iv_action_play);
-        rorateDiskAutomation(mImageDisk);
+        mBtnEqualizer = (ImageView) view.findViewById(R.id.iv_action_equalizer);
+        mBtnPause.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mBtnPause.setVisibility(View.GONE);
+                mBtnPlay.setVisibility(View.VISIBLE);
+            }
+        });
+
+        mBtnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mBtnPlay.setVisibility(View.GONE);
+                mBtnPause.setVisibility(View.VISIBLE);
+            }
+        });
+
+        mBtnEqualizer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToActivity(EqualizerActivity.class);
+            }
+        });
+        //rorateDiskAutomation(mImageDisk);
         mSizeMedia = convertMinuteToMillis(1);
         mTotalTime = Calendar.getInstance().getTimeInMillis() + mSizeMedia;
         mUpdateProgressBar = new Runnable() {
@@ -103,6 +127,24 @@ public class PlayerMediaFragment extends BaseFragment {
     }
 
     @Override
+    public void onClick(View view) {
+        super.onClick(view);
+        switch (view.getId()) {
+            case R.id.iv_action_equalizer:
+                goToActivity(EqualizerActivity.class);
+                break;
+            case R.id.iv_action_pause:
+                mBtnPause.setVisibility(View.GONE);
+                mBtnPlay.setVisibility(View.VISIBLE);
+                break;
+            case R.id.iv_action_play:
+                mBtnPlay.setVisibility(View.GONE);
+                mBtnPause.setVisibility(View.VISIBLE);
+                break;
+        }
+    }
+
+    @Override
     public void onStop() {
         super.onStop();
 //        mImageDisk.startAnimation(null);
@@ -110,4 +152,12 @@ public class PlayerMediaFragment extends BaseFragment {
     public long convertMinuteToMillis(int minute) {
         return minute * 60 *1000;
     }
+
+    private View.OnClickListener mEqualizerOnClicklistener = new View.OnClickListener() {
+        @Override
+        public void onClick(View view) {
+            goToActivity(EqualizerActivity.class);
+
+        }
+    };
 }
