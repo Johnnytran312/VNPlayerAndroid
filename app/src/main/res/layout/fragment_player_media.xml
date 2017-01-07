@@ -42,6 +42,8 @@
             <ImageView
                 android:id="@+id/iv_action_equalizer"
                 android:layout_width="@dimen/size_image_action_min"
+                android:clickable="true"
+                android:onClick="onClick"
                 android:layout_height="@dimen/size_image_action_min"
                 android:src="@mipmap/ic_equalize_horizontal_white_1" />
         </LinearLayout>
@@ -87,11 +89,12 @@
                 android:layout_weight="1"
                 android:src="@mipmap/ic_skip_next_white_48dp"/>
             <ImageView
-                android:id="@+id/iv_action_rate"
+                android:id="@+id/iv_action_replay"
                 android:layout_width="@dimen/size_image_action_normal"
                 android:layout_height="@dimen/size_image_action_normal"
                 android:layout_weight="1"
-                android:src="@mipmap/ic_star"/>
+                android:padding="5dp"
+                android:src="@mipmap/ic_replay_white_1"/>
         </LinearLayout>
     </LinearLayout>
 </LinearLayout>
