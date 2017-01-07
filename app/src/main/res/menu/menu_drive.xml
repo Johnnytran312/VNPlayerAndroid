@@ -1,0 +1,10 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.johnnytran.customactionbar.DriveActivity">
+    <item
+        android:id="@+id/resource_name"
+        android:icon="@mipmap/ic_clear_black_24dp"
+        android:title="@string/action_favorite"
+        app:showAsAction="ifRoom"/>
+</menu>

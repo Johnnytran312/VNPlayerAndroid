@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="1">
+
+    <TextView
+        android:text="TextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:layout_weight="0.10" />
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="94dp">
+
+        <TextView
+            android:text="TextView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/textView2" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#57aeff"
+        android:layout_weight="19.50">
+
+        <Button
+            android:drawableTop="@mipmap/ic_skip_previous_black_24dp"
+            android:text="PRE"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button6"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog" />
+
+        <Button
+            android:drawableTop="@mipmap/ic_play_circle_outline_black_24dp"
+            android:text="PLAY"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button5"
+            android:gravity="center"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog" />
+
+        <Button
+            android:drawableTop="@mipmap/ic_skip_next_black_24dp"
+            android:text="next"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button4"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="84dp">
+
+        <Button
+            android:drawableTop="@mipmap/ic_shuffle_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button8"
+            android:gravity="center"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog" />
+
+        <Button
+            android:drawableTop="@mipmap/ic_repeat_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/button7"
+            android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.ButtonBar.AlertDialog" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="181dp"
+        android:background="#57aeff"></LinearLayout>
+</LinearLayout>

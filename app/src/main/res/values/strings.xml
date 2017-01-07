@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">VN Player</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="tab_media_title">Bài hát</string>
+    <string name="tab_album_title">Album</string>
+    <string name="tab_singer_title">Ca sĩ</string>
+    <string name="tab_playlist_title">Danh sách nhạc</string>
+    <string name="title_activity_drive">Drive</string>
+    <string name="title_activity_equalizer">EqualizerActivity</string>
+    <string name="menu_item_equalizer">Tuỳ chỉnh âm thanh</string>
+    <string name="menu_item_ui">Giao diện</string>
+    <string name="menu_item_cloud">Đám mây</string>
+
+    <string-array name="equalizers_default">
+        <item>Pop</item>
+        <item>Rock</item>
+        <item>Jazz</item>
+        <item>Ballad</item>
+        <item>Bass Boot</item>
+        <item>Accoustic</item>
+        <item>Pop</item>
+
+    </string-array>
+    <string name="title_activity_drive_rotate">DriveActivityRotate</string>
+    <string name="action_favorite">action_favorite</string>
+
+</resources>

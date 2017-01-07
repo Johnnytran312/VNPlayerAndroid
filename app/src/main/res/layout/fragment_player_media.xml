@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/ic_background_player_9">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+        <ImageView
+            android:id="@+id/iv_disk"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/ic_disk"
+            android:padding="20dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="#c0c0c0"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bg_player_control"
+        android:gravity="center_vertical">
+        <LinearLayout
+            android:id="@+id/layout_special_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right"
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/iv_action_share"
+                android:layout_width="@dimen/size_image_action_min"
+                android:layout_height="@dimen/size_image_action_min"
+                android:src="@mipmap/ic_share_white"
+                android:layout_marginRight="20dp"/>
+            <ImageView
+                android:id="@+id/iv_action_equalizer"
+                android:layout_width="@dimen/size_image_action_min"
+                android:layout_height="@dimen/size_image_action_min"
+                android:src="@mipmap/ic_equalize_horizontal_white_1" />
+        </LinearLayout>
+
+       <include layout="@layout/layout_custom_proressbar_horizontal"/>
+
+        <LinearLayout
+            android:id="@+id/layout_player_control"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="10dp">
+            <ImageView
+                android:id="@+id/iv_action_repeat"
+                android:layout_width="@dimen/size_image_action_normal"
+                android:layout_height="@dimen/size_image_action_normal"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_shuffle_white_2"/>
+            <ImageView
+                android:id="@+id/iv_action_previous"
+                android:layout_width="@dimen/size_image_action_normal"
+                android:layout_height="@dimen/size_image_action_normal"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_skip_previous_white_48dp"/>
+            <ImageView
+                android:id="@+id/iv_action_pause"
+                android:layout_width="@dimen/size_image_action_normal"
+                android:layout_height="@dimen/size_image_action_normal"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_pause_white_2"/>
+
+            <ImageView
+                android:id="@+id/iv_action_play"
+                android:layout_width="@dimen/size_image_action_normal"
+                android:layout_height="@dimen/size_image_action_normal"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_play_white"
+                android:visibility="gone"/>
+            <ImageView
+                android:id="@+id/iv_action_next"
+                android:layout_width="@dimen/size_image_action_normal"
+                android:layout_height="@dimen/size_image_action_normal"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_skip_next_white_48dp"/>
+            <ImageView
+                android:id="@+id/iv_action_rate"
+                android:layout_width="@dimen/size_image_action_normal"
+                android:layout_height="@dimen/size_image_action_normal"
+                android:layout_weight="1"
+                android:src="@mipmap/ic_star"/>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
