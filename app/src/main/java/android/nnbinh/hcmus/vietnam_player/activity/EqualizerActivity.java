@@ -1,30 +1,12 @@
 package android.nnbinh.hcmus.vietnam_player.activity;
 
-import android.app.FragmentTransaction;
-import android.content.Intent;
-import android.nnbinh.hcmus.vietnam_player.MainActivity;
 import android.nnbinh.hcmus.vietnam_player.R;
-import android.nnbinh.hcmus.vietnam_player.fragment.BaseFragment;
-import android.nnbinh.hcmus.vietnam_player.fragment.MainFragment;
-import android.nnbinh.hcmus.vietnam_player.fragment.PlayerMediaFragment;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
-import android.view.LayoutInflater;
-import android.view.Menu;
-import android.view.MenuInflater;
-import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
-import android.widget.Toast;
 
 /**
  * Created by nguyenngocbinh on 1/7/17.
