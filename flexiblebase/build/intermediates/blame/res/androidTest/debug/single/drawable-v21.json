@@ -1,9 +1,5 @@
 [
     {
-        "merged": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/D:\\NgocBinh\\MySource\\VNPlayerAndroid\\flexiblebase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\notification_action_background.xml",
-        "source": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/D:\\NgocBinh\\MySource\\VNPlayerAndroid\\flexiblebase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\25.1.0\\res\\drawable-v21\\notification_action_background.xml"
-    },
-    {
         "merged": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/flexiblebase/build/intermediates/res/merged/androidTest/debug/drawable-v21/abc_action_bar_item_background_material.xml",
         "source": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/flexiblebase/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/drawable-v21/abc_action_bar_item_background_material.xml"
     },
@@ -12,19 +8,7 @@
         "source": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/flexiblebase/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/drawable-v21/abc_btn_colored_material.xml"
     },
     {
-        "merged": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/D:\\NgocBinh\\MySource\\VNPlayerAndroid\\flexiblebase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_action_bar_item_background_material.xml",
-        "source": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/D:\\NgocBinh\\MySource\\VNPlayerAndroid\\flexiblebase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-v21\\abc_action_bar_item_background_material.xml"
-    },
-    {
-        "merged": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/D:\\NgocBinh\\MySource\\VNPlayerAndroid\\flexiblebase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_edit_text_material.xml",
-        "source": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/D:\\NgocBinh\\MySource\\VNPlayerAndroid\\flexiblebase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-v21\\abc_edit_text_material.xml"
-    },
-    {
         "merged": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/flexiblebase/build/intermediates/res/merged/androidTest/debug/drawable-v21/abc_edit_text_material.xml",
         "source": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/flexiblebase/build/intermediates/exploded-aar/com.android.support/appcompat-v7/24.0.0/res/drawable-v21/abc_edit_text_material.xml"
-    },
-    {
-        "merged": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/D:\\NgocBinh\\MySource\\VNPlayerAndroid\\flexiblebase\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-v21\\abc_btn_colored_material.xml",
-        "source": "/Users/nguyenngocbinh/Documents/project/android/VNPlayerAndroid/D:\\NgocBinh\\MySource\\VNPlayerAndroid\\flexiblebase\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\24.0.0\\res\\drawable-v21\\abc_btn_colored_material.xml"
     }
 ]

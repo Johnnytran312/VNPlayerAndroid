@@ -17,8 +17,6 @@ import java.util.ArrayList;
  */
 
 public class TabFragment extends BaseFragment {
-    private String mPageTitle;
-    private int mPageIndex;
     private final static String PAGE_INDEX = "PAGE_INDEX";
     private final static String PAGE_TITLE = "PAGE_TITLE";
     private RecyclerView mRecyclerView;
@@ -36,8 +34,6 @@ public class TabFragment extends BaseFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mPageIndex = getArguments().getInt(PAGE_INDEX, 0);
-        mPageTitle = getArguments().getString(PAGE_TITLE);
         setTitle(getString(R.string.app_name));
 
     }

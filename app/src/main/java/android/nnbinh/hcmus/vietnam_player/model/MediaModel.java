@@ -9,7 +9,7 @@ import io.realm.annotations.PrimaryKey;
 
 public class MediaModel extends RealmObject {
     @PrimaryKey
-    private int id;
+    private long id;
     private String name;
     private String albumName;
     private String artistName;
@@ -22,7 +22,7 @@ public class MediaModel extends RealmObject {
 
     }
 
-    public MediaModel(int id, String name, String thumbUrl, String artistName, boolean isLocal) {
+    public MediaModel(long id, String name, String thumbUrl, String artistName, boolean isLocal) {
         this.id = id;
         this.name = name;
         this.thumbUrl = thumbUrl;
@@ -30,7 +30,7 @@ public class MediaModel extends RealmObject {
         this.isLocal = isLocal;
     }
 
-    public int getId() {
+    public long getId() {
         return id;
     }
 
