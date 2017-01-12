@@ -66,8 +66,8 @@ public class TabFragment extends BaseFragment {
         mRecycleAdapter.setOnItemClickListener(new MyAdapter.ClickListener() {
             @Override
             public void onItemClick(MediaModel media) {
-                PlayerMediaFragment.start(media);
-                PlayerMediaFragment fragment = PlayerMediaFragment.start(media);
+                MediaPlayerFragment.start(media);
+                MediaPlayerFragment fragment = MediaPlayerFragment.start(media);
                 goToFragment(fragment);
             }
         });

@@ -19,8 +19,9 @@ import java.util.Calendar;
  * Created by nguyenngocbinh on 1/7/17.
  */
 
-public class PlayerMediaFragment extends BaseFragment {
-    private static MediaModel mMedia;
+public class MediaPlayerFragment extends BaseFragment {
+    private final static String MEDIA_ITEM = "MEDIA_ITEM";
+    private MediaModel mMedia;
     private ImageView mImageDisk;
     private ImageView mBtnPause;
     private ImageView mBtnPlay;
@@ -30,15 +31,16 @@ public class PlayerMediaFragment extends BaseFragment {
     private Handler mHandler = new Handler();
     private long mTotalTime = 0;
     private long mSizeMedia = 0;
-    public static PlayerMediaFragment start(MediaModel media){
-        PlayerMediaFragment fragment = new PlayerMediaFragment();
-        mMedia = media;
+    public static MediaPlayerFragment start(MediaModel media){
+        MediaPlayerFragment fragment = new MediaPlayerFragment();
+        fragment.setDataTransfer(MEDIA_ITEM, media);
         return fragment;
     }
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        mMedia = (MediaModel) getDataTransfer(MEDIA_ITEM);
         mUpdateProgressBar = new Runnable() {
             @Override
             public void run() {
@@ -124,8 +126,5 @@ public class PlayerMediaFragment extends BaseFragment {
         mImageDisk.clearAnimation();
         mHandler.removeCallbacks(mUpdateProgressBar);
         mUpdateProgressBar = null;
-        mBtnPause = null;
-        mBtnPlay = null;
-        mMedia = null;
     }
 }
