@@ -1,6 +1,12 @@
 ———————————— DỒ ÁN VN-PLAYER - ỨNG DỤNG CHƠI NHẠC ————————————
 
-Một số yêu cầu khỉ làm: 
+I. Danh sách công việc 
+	https://docs.google.com/spreadsheets/d/1iiIGkcMDnPhvqBE_7SI1YZ8Sbh5jay2gy5Q9DvO0Vl8/edit?usp=sharing
+
+II. Thư mục đồ án (boo cáo, document, đánh giá, src ) 
+    [cập nhật sau ]
+
+III. Một số yêu cầu khỉ làm: 
  1. tạo branch
 	- checkout từ develop 
 	- trước khi code, các bạn cần tạo branch riêng format sau: 
@@ -22,3 +28,4 @@ Một số yêu cầu khỉ làm:
 2. luôn update mới nhất từ develop trước khi push 
 3. tạo merged request (pull request) (merged từ nhánh của bạn vào develop)
 4. hãy thông báo với mình, sau khi song  
+

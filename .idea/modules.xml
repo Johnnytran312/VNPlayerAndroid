@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/VNPlayerAndroid.iml" filepath="$PROJECT_DIR$/VNPlayerAndroid.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/flexiblebase/flexiblebase.iml" filepath="$PROJECT_DIR$/flexiblebase/flexiblebase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/flexiblebase/flexiblebase.iml" filepath="$PROJECT_DIR$/flexiblebase/flexiblebase.iml" />
     </modules>
   </component>
 </project>
