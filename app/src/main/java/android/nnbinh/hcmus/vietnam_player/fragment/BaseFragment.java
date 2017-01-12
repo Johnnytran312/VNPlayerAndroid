@@ -12,11 +12,13 @@ import android.view.MenuInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import cloud.com.android.flexiblebase.fbase.fragment.FBaseFragment;
+
 /**
  * Created by nguyenngocbinh on 1/5/17.
  */
 
-public class BaseFragment extends Fragment implements View.OnClickListener{
+public class BaseFragment extends FBaseFragment implements View.OnClickListener{
     private int mResLayoutId;
 
     public void setLayout(int resLayoutId) {

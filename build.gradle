@@ -17,6 +17,15 @@ allprojects {
     repositories {
         jcenter()
     }
+
+    //Global variables for all modules. config here
+    project.ext {
+        buildToolsVersion = "24.0.1" //String
+        minSdkVersion = 15 //Integer
+        targetSdkVersion = 24
+        compileSdkVersion = 24
+        supportLibVersion = '24.0.0'
+    }
 }
 
 task clean(type: Delete) {
