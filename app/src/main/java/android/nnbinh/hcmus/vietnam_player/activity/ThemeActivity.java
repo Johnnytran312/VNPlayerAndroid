@@ -44,7 +44,7 @@ public class ThemeActivity extends AppCompatActivity implements View.OnClickList
         btnDrive.setOnClickListener(this);
 
         Toast.makeText(ThemeActivity.this,"NORMAL", Toast.LENGTH_SHORT).show();
-        imgThemesView.setImageResource(R.mipmap.blue_girl);
+        imgThemesView.setImageResource(R.mipmap.theme_full_play);
         idthem = "normal";
 
 
@@ -106,7 +106,7 @@ public class ThemeActivity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         if(v.getId() == btnDrive.getId()){
 //            Toast.makeText(ThemeActivity.this,"DRIVE", Toast.LENGTH_SHORT).show();
-            imgThemesView.setImageResource(R.mipmap.blue_girl);
+            imgThemesView.setImageResource(R.mipmap.theme_drive_play);
             idthem = "drive";
         } else if(v.getId() == btnEasy.getId()){
             Toast.makeText(ThemeActivity.this,"EASY", Toast.LENGTH_SHORT).show();

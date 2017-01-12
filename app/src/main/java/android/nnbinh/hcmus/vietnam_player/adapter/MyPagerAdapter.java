@@ -3,7 +3,7 @@ package android.nnbinh.hcmus.vietnam_player.adapter;
 import android.content.Context;
 import android.nnbinh.hcmus.vietnam_player.Custom.CustomTab;
 import android.nnbinh.hcmus.vietnam_player.R;
-import android.nnbinh.hcmus.vietnam_player.fragment.FirstFragment;
+import android.nnbinh.hcmus.vietnam_player.fragment.TabFragment;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
@@ -38,7 +38,7 @@ public class MyPagerAdapter extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return FirstFragment.newInstance(position, mTabs.get(position).getTitle());
+        return TabFragment.newInstance(position, mTabs.get(position).getTitle());
     }
 
     @Override

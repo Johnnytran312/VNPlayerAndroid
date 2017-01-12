@@ -48,7 +48,6 @@ public class MainFragment extends BaseFragment {
         mVp_pager = (ViewPager) view.findViewById(R.id.vp_pager);
         mVp_pager.setAdapter(mAdapter);
         settingTabLayout(view);
-        setAddOnPageChangeListener();
         mAdapter.notifyDataSetChanged();
     }
 
@@ -56,31 +55,8 @@ public class MainFragment extends BaseFragment {
         tabLayout = (CustomTabLayout) view.findViewById(R.id.sliding_tabs);
         tabLayout.setTabsPerPage(3);
         tabLayout.setupWithViewPager(mVp_pager);
-        tabLayout.setTabColor(mNormalColor, Color.RED);
     }
 
-    private void setAddOnPageChangeListener(){
-        mVp_pager.addOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-            // This method will be invoked when a new page becomes selected.
-            @Override
-            public void onPageSelected(int position) {
-                tabLayout.setTabColor(mNormalColor, mTabs.get(position).getSelectedColor());
-            }
-
-            // This method will be invoked when the current page is scrolled
-            @Override
-            public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
-                // Code goes here
-            }
-
-            // Called when the scroll state changes:
-            // SCROLL_STATE_IDLE, SCROLL_STATE_DRAGGING, SCROLL_STATE_SETTLING
-            @Override
-            public void onPageScrollStateChanged(int state) {
-                // Code goes here
-            }
-        });
-    }
 
     private ArrayList<CustomTab> getCustomTabs(){
         ArrayList<CustomTab>  tabs = new ArrayList<CustomTab>();
@@ -93,10 +69,7 @@ public class MainFragment extends BaseFragment {
     }
 
     @Override
-    public void onStop() {
-        super.onStop();
-//        tabLayout =null;
-//        mVp_pager = null;
-//        mAdapter = null;
+    public void onDestroy() {
+        super.onDestroy();
     }
 }

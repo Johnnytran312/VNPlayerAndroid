@@ -26,7 +26,7 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="0.27">
+        android:layout_weight="0.01">
 
         <TextView
             android:text="Con Chem Chép"
@@ -67,7 +67,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         style="@style/AppTheme.PopupOverlay"
-        android:layout_weight="0.72">
+        android:layout_weight="0.78">
 
         <ImageButton
             android:layout_width="match_parent"
@@ -75,12 +75,13 @@
             app:srcCompat="@mipmap/ic_play_arrow_black_36dp"
             android:id="@+id/imageButtonPlay"
             android:background="#029183"
-            android:layout_weight="3.95" />
+            android:layout_weight="2.39" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="2dp">
+            android:paddingTop="2dp"
+            android:layout_weight="1.15">
 
             <ImageButton
                 android:layout_width="match_parent"
@@ -98,7 +99,6 @@
                 android:id="@+id/imageButtonNext"
                 android:background="#029183"
                 android:layout_weight="1"
-                android:padding="2dp"
                 style="@style/Widget.AppCompat.ImageButton" />
         </LinearLayout>
 
@@ -109,7 +109,8 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#fff">
+        android:background="#fff"
+        android:layout_weight="0.22">
 
         <ImageButton
             android:layout_width="wrap_content"
@@ -127,6 +128,7 @@
             app:srcCompat="@mipmap/ic_repeat_black_24dp"
             android:id="@+id/imageButton4"
             android:layout_weight="1"
+            android:layout_gravity="center"
             style="@android:style/Widget.ImageButton"
             android:background="@android:color/background_light" />
     </LinearLayout>

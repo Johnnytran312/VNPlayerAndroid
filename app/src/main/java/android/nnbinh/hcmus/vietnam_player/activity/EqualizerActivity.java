@@ -2,7 +2,6 @@ package android.nnbinh.hcmus.vietnam_player.activity;
 
 import android.nnbinh.hcmus.vietnam_player.R;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.AdapterView;
@@ -13,7 +12,7 @@ import android.widget.Spinner;
  * Created by nguyenngocbinh on 1/7/17.
  */
 
-public class EqualizerActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener{
+public class EqualizerActivity extends BaseActivity implements AdapterView.OnItemSelectedListener{
     Spinner spinEqualizers;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
