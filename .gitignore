@@ -5,6 +5,7 @@
 /.idea/libraries
 .DS_Store
 /build
+/flexiblebase/build/*
 /captures
 .externalNativeBuild
 
@@ -27,6 +28,7 @@
 
 # generated files
 /*/bin/
+/*/build/
 /*/gen/
 /*/obj/
 /gen/
